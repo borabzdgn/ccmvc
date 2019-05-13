@@ -10,11 +10,14 @@ class ccmvc {
 	protected $homeController = "HomeController"; 
 	protected $methodName     = "index";
 	protected $paramsArray    = [];
+	public    $configFile     = 'C:\server\htdocs\ccmvc\application\Config\mvc.settings.php';
 	
 	public function __construct(){
 		$request = $this->getURL();
+		$request = ucfirst($request[0]);
+		require_once $configFile;
 		
-		if() {
+		if(file_exists(APPDIR . 'Controller' . "\{$request}.php")) {
 			
 		}
 	}

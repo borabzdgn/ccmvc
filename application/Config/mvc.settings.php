@@ -7,6 +7,7 @@
 
 
 define('HOMEDIR','C:\server\htdocs\ccmvc');
+define('APPDIR',HOMEDIR . '\application\');
 
 
 
