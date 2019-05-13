@@ -1,2 +1,2 @@
 # ccmvc
-Code Colony MVC Core
+Code Colony MVC Core Beta
