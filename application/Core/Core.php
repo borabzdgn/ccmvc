@@ -11,6 +11,13 @@ class ccmvc {
 	protected $methodName     = "index";
 	protected $paramsArray    = [];
 	
+	public function __construct(){
+		$request = $this->getURL();
+		
+		if() {
+			
+		}
+	}
 	
 
 	public function getURL() {

@@ -6,5 +6,7 @@
 	*/
 
 
-define('HOME',__DIR__);
+define('HOMEDIR','C:\server\htdocs\ccmvc');
+
+
 
