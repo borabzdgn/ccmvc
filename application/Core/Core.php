@@ -6,5 +6,3 @@
 	*/
 
 
-define('HOME',__DIR__);
-
