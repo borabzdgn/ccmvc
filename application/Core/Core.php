@@ -5,4 +5,12 @@
 		Bora BOZDOGAN
 	*/
 
-
+class ccmvc {
+	protected $homeController = "HomeController";
+	protected $methodName     = "index";
+	protected $paramsArray    = [];
+	
+	
+	
+	
+}
