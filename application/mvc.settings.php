@@ -7,7 +7,7 @@
 
 
 define('APPDIR',__DIR__);
-define('DS',DIRECTORY_SEPARATOR);
+
 
 
 
