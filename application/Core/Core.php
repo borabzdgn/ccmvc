@@ -17,23 +17,15 @@ class ccmvc {
 		require_once($this->configFile);
 		$HC = $this->homeController;
 		//$request = $this->request;
+
 		if(file_exists(APPDIR . DIRECTORY_SEPARATOR . 'Controller' . DIRECTORY_SEPARATOR  . $request ."Controller.php")) {
 			require_once APPDIR . DIRECTORY_SEPARATOR . 'Core' . DIRECTORY_SEPARATOR . "Controller.php";
-			
-			$Controller = new Controller();
 			require_once APPDIR . DIRECTORY_SEPARATOR . 'Controller' . DIRECTORY_SEPARATOR . $request  ."Controller.php";
 			
-			
-		}elseif(file_exists(APPDIR . DIRECTORY_SEPARATOR .'Controller'  . DIRECTORY_SEPARATOR .  $HC . '.php')) {
-			
-			require_once APPDIR . DIRECTORY_SEPARATOR . 'Core' . DIRECTORY_SEPARATOR ."Controller.php";
-			require_once APPDIR . DIRECTORY_SEPARATOR .'Controller'  . DIRECTORY_SEPARATOR .  $HC . '.php';
-			$Controller = new Controller();
-			
-			
+		}elseif($request == "") {
+			require_once APPDIR . DIRECTORY_SEPARATOR . 'Core' . DIRECTORY_SEPARATOR . "Controller.php";
+			require_once APPDIR . DIRECTORY_SEPARATOR . 'Controller' . DIRECTORY_SEPARATOR  . $HC . '.php';
 		}else {
-			
-			require_once APPDIR . '\Core\Error.php';
 			
 		}
 		

@@ -9,7 +9,13 @@ class Controller{
 	
 	
 	public function getView($viewName,$data=null){
-		require_once APPDIR . "\View\{$viewName}.view.php";
+
+		if(file_exists(APPDIR . DIRECTORY_SEPARATOR . "View" . DIRECTORY_SEPARATOR . $viewName . '.view.php')) {
+			require_once(APPDIR . DIRECTORY_SEPARATOR . "View" . DIRECTORY_SEPARATOR . $viewName . '.view.php');
+		}else {
+			//error exception
+		}
+		
 		
 	}
 	

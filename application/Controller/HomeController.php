@@ -1,2 +1,3 @@
 <?php
-$controller->getView('home');
+$Controller = new Controller();
+$Controller->getView('home');
