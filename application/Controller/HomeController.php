@@ -1,0 +1,2 @@
+<?php
+$controller->getView('home');

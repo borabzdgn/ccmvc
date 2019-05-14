@@ -10,11 +10,10 @@ class Controller{
 	
 	public function getView($viewName,$data=null){
 		require_once APPDIR . "\View\{$viewName}.view.php";
+		
 	}
 	
-	public function getModel(ucfirst($modelName)) {
-		require_
-	}
+	
 	
 	
 	

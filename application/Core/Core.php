@@ -13,22 +13,31 @@ class ccmvc {
 	
 	public function __construct(){
 		$request = $this->getURL();
-		print_r($request);
 		$request = ucfirst($request[0]);
 		require_once($this->configFile);
 		$HC = $this->homeController;
-		
-		if(file_exists(APPDIR . 'Controller' . "\{$request}.php")) {
-			require_once APPDIR . 'Controller' . "\{$request}.php";
-			require_once APPDIR . 'Core' . "\Controlller.php";
+		//$request = $this->request;
+		if(file_exists(APPDIR . DIRECTORY_SEPARATOR . 'Controller' . DIRECTORY_SEPARATOR  . $request ."Controller.php")) {
+			require_once APPDIR . DIRECTORY_SEPARATOR . 'Core' . DIRECTORY_SEPARATOR . "Controller.php";
+			
 			$Controller = new Controller();
-		}elseif(file_exists(APPDIR . 'Controller' . "\{$HC}.php")) {
-			require_once APPDIR . 'Controller' . $HC . '\.php';
-			require_once APPDIR . 'Core' . $HC ."\Controlller.php";
+			require_once APPDIR . DIRECTORY_SEPARATOR . 'Controller' . DIRECTORY_SEPARATOR . $request  ."Controller.php";
+			
+			
+		}elseif(file_exists(APPDIR . DIRECTORY_SEPARATOR .'Controller'  . DIRECTORY_SEPARATOR .  $HC . '.php')) {
+			
+			require_once APPDIR . DIRECTORY_SEPARATOR . 'Core' . DIRECTORY_SEPARATOR ."Controller.php";
+			require_once APPDIR . DIRECTORY_SEPARATOR .'Controller'  . DIRECTORY_SEPARATOR .  $HC . '.php';
+			$Controller = new Controller();
+			
+			
 		}else {
+			
 			require_once APPDIR . '\Core\Error.php';
 			
 		}
+		
+
 	}
 	
 
