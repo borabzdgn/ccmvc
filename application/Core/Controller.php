@@ -8,9 +8,15 @@ class Controller{
 	public $configFile     = 'application/mvc.settings.php';
 	
 	
-	public function getView($viewName){
-		require_once APPDIR . "\{$configFile}";
+	public function getView($viewName,$data=null){
+		require_once APPDIR . "\View\{$viewName}.view.php";
 	}
+	
+	public function getModel(ucfirst($modelName)) {
+		require_
+	}
+	
+	
 	
 	
 }
