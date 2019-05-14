@@ -7,10 +7,9 @@
 
 class ccmvc {
 	
-	protected $homeController = "HomeController"; 
-	protected $methodName     = "index";
-	protected $paramsArray    = [];
-	public    $configFile     = 'application/mvc.settings.php';
+	public $homeController = "HomeController"; 
+	public $methodName     = "index";
+	public $configFile     = 'application/mvc.settings.php';
 	
 	public function __construct(){
 		$request = $this->getURL();
