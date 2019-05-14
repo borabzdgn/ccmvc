@@ -26,7 +26,9 @@ class ccmvc {
 			require_once APPDIR . DIRECTORY_SEPARATOR . 'Core' . DIRECTORY_SEPARATOR . "Controller.php";
 			require_once APPDIR . DIRECTORY_SEPARATOR . 'Controller' . DIRECTORY_SEPARATOR  . $HC . '.php';
 		}else {
-			
+			require_once APPDIR . DIRECTORY_SEPARATOR . 'Core' . DIRECTORY_SEPARATOR . "Error.php";
+			$Error = new ErrorClass();
+			$Error->ControllerNotFound();
 		}
 		
 
