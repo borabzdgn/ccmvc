@@ -6,8 +6,7 @@
 	*/
 
 
-define('HOMEDIR',__DIR__);
-define('APPDIR',HOMEDIR . "\application\");
+define('APPDIR',__DIR__);
 
 
 
