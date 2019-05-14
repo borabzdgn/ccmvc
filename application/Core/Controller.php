@@ -5,9 +5,11 @@
 	
 */
 class Controller{
+	public $configFile     = 'application/mvc.settings.php';
 	
-	public function getView(){
-		
+	
+	public function getView($viewName){
+		require_once APPDIR . "\{$configFile}";
 	}
 	
 	
