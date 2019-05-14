@@ -6,7 +6,7 @@
 	*/
 
 
-define('HOMEDIR','C:\server\htdocs\ccmvc');
+define('HOMEDIR',__DIR__);
 define('APPDIR',HOMEDIR . '\application\');
 
 
