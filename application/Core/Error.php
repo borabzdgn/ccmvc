@@ -2,7 +2,7 @@
 /*
 	Bora BOZDOGAN
 	14.05.2019
-	
+	.
 */
 class ErrorClass{
 	
