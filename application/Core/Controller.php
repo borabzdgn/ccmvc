@@ -13,7 +13,9 @@ class Controller{
 		if(file_exists(APPDIR . DIRECTORY_SEPARATOR . "View" . DIRECTORY_SEPARATOR . $viewName . '.view.php')) {
 			require_once(APPDIR . DIRECTORY_SEPARATOR . "View" . DIRECTORY_SEPARATOR . $viewName . '.view.php');
 		}else {
-			//error exception
+			require APPDIR . '/Core/Error.php';
+			$Error = new ErrorClass();
+			$Error->ControllerNotFound();
 		}
 		
 		
