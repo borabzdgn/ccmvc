@@ -20,10 +20,12 @@ class ccmvc {
 
 		if(file_exists(APPDIR . DIRECTORY_SEPARATOR . 'Controller' . DIRECTORY_SEPARATOR  . $request ."Controller.php")) {
 			require_once APPDIR . DIRECTORY_SEPARATOR . 'Core' . DIRECTORY_SEPARATOR . "Controller.php";
+			require_once APPDIR . DIRECTORY_SEPARATOR . 'Core' . DIRECTORY_SEPARATOR . "Model.php";
 			require_once APPDIR . DIRECTORY_SEPARATOR . 'Controller' . DIRECTORY_SEPARATOR . $request  ."Controller.php";
 			
 		}elseif($request == "") {
 			require_once APPDIR . DIRECTORY_SEPARATOR . 'Core' . DIRECTORY_SEPARATOR . "Controller.php";
+			require_once APPDIR . DIRECTORY_SEPARATOR . 'Core' . DIRECTORY_SEPARATOR . "Model.php";
 			require_once APPDIR . DIRECTORY_SEPARATOR . 'Controller' . DIRECTORY_SEPARATOR  . $HC . '.php';
 		}else {
 			require_once APPDIR . DIRECTORY_SEPARATOR . 'Core' . DIRECTORY_SEPARATOR . "Error.php";

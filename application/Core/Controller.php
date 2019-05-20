@@ -18,12 +18,8 @@ class Controller{
 			$Error->ControllerNotFound();
 		}
 		
-		
 	}
-	
-	
-	
-	
-	
+
+		
 	
 }
